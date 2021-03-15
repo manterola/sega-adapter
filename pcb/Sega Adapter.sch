@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Sega Adapter"
-Date "2021-01-30"
-Rev "1"
+Date "2021-03-15"
+Rev "2"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -49,12 +49,12 @@ $EndComp
 $Comp
 L Device:C C1
 U 1 1 601532C7
-P 8200 2800
-F 0 "C1" V 8452 2800 50  0000 C CNN
-F 1 "0.1uF" V 8361 2800 50  0000 C CNN
-F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 8238 2650 50  0001 C CNN
-F 3 "~" H 8200 2800 50  0001 C CNN
-	1    8200 2800
+P 5650 4650
+F 0 "C1" V 5902 4650 50  0000 C CNN
+F 1 "0.1uF" V 5811 4650 50  0000 C CNN
+F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 5688 4500 50  0001 C CNN
+F 3 "~" H 5650 4650 50  0001 C CNN
+	1    5650 4650
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
@@ -70,17 +70,11 @@ Wire Wire Line
 Wire Wire Line
 	8550 3750 9100 3750
 Wire Wire Line
-	8900 4250 8900 3950
-Wire Wire Line
-	8900 3950 9100 3950
-Wire Wire Line
 	8250 4150 9100 4150
 Wire Wire Line
 	8250 3750 8500 3750
 Wire Wire Line
 	8500 3750 8500 4350
-Wire Wire Line
-	8500 4350 9100 4350
 Wire Wire Line
 	8250 3850 8900 3850
 Wire Wire Line
@@ -88,7 +82,7 @@ Wire Wire Line
 Wire Wire Line
 	8900 3650 9100 3650
 Wire Wire Line
-	8250 4250 8900 4250
+	8250 4250 8800 4250
 Wire Wire Line
 	8250 3950 8700 3950
 Wire Wire Line
@@ -103,9 +97,6 @@ Wire Wire Line
 	9000 3850 9000 3250
 Wire Wire Line
 	9100 4050 9000 4050
-Wire Wire Line
-	9000 4050 9000 4650
-Connection ~ 7150 4650
 Wire Wire Line
 	8250 4050 8300 4050
 Wire Wire Line
@@ -140,8 +131,6 @@ Wire Wire Line
 Wire Wire Line
 	5100 3600 5100 4250
 Wire Wire Line
-	5100 4250 5850 4250
-Wire Wire Line
 	4850 3800 5400 3800
 Wire Wire Line
 	5400 3800 5400 4150
@@ -155,43 +144,6 @@ Wire Wire Line
 	5250 4200 5250 4050
 Wire Wire Line
 	5250 4050 6050 4050
-Wire Wire Line
-	7150 4650 9000 4650
-Wire Wire Line
-	7150 4650 7150 4750
-$Comp
-L Connector:Conn_PIC_ICSP_ICD J3
-U 1 1 602A483D
-P 5850 5900
-F 0 "J3" V 5475 5900 50  0000 C CNN
-F 1 "ICSP" V 5384 5900 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 5900 6050 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/devicedoc/30277d.pdf" V 5550 5750 50  0001 C CNN
-	1    5850 5900
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8300 4050 8300 5000
-Wire Wire Line
-	5400 4150 5950 4150
-Connection ~ 5950 4150
-Wire Wire Line
-	5950 4150 6050 4150
-Connection ~ 5850 4250
-Wire Wire Line
-	5850 4250 6050 4250
-$Comp
-L power:GND #PWR0101
-U 1 1 604F18E9
-P 9000 4650
-F 0 "#PWR0101" H 9000 4400 50  0001 C CNN
-F 1 "GND" H 9005 4477 50  0000 C CNN
-F 2 "" H 9000 4650 50  0001 C CNN
-F 3 "" H 9000 4650 50  0001 C CNN
-	1    9000 4650
-	1    0    0    -1  
-$EndComp
-Connection ~ 9000 4650
 $Comp
 L power:+5V #PWR0102
 U 1 1 604F23D4
@@ -227,77 +179,30 @@ F 3 "~" H 9000 4050 50  0001 C CNN
 	1    9000 4050
 	1    0    0    -1  
 $EndComp
-Connection ~ 9000 4050
 Connection ~ 9000 3250
-Wire Wire Line
-	4950 4650 7150 4650
-$Comp
-L power:GND #PWR0103
-U 1 1 605081F1
-P 6250 6100
-F 0 "#PWR0103" H 6250 5850 50  0001 C CNN
-F 1 "GND" H 6255 5927 50  0000 C CNN
-F 2 "" H 6250 6100 50  0001 C CNN
-F 3 "" H 6250 6100 50  0001 C CNN
-	1    6250 6100
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0104
 U 1 1 60508F0B
-P 8050 2800
-F 0 "#PWR0104" H 8050 2550 50  0001 C CNN
-F 1 "GND" H 8055 2627 50  0000 C CNN
-F 2 "" H 8050 2800 50  0001 C CNN
-F 3 "" H 8050 2800 50  0001 C CNN
-	1    8050 2800
+P 5500 4650
+F 0 "#PWR0104" H 5500 4400 50  0001 C CNN
+F 1 "GND" H 5505 4477 50  0000 C CNN
+F 2 "" H 5500 4650 50  0001 C CNN
+F 3 "" H 5500 4650 50  0001 C CNN
+	1    5500 4650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	7150 3250 9000 3250
 $Comp
-L power:+5V #PWR0105
-U 1 1 6050DD11
-P 5450 6100
-F 0 "#PWR0105" H 5450 5950 50  0001 C CNN
-F 1 "+5V" H 5465 6273 50  0000 C CNN
-F 2 "" H 5450 6100 50  0001 C CNN
-F 3 "" H 5450 6100 50  0001 C CNN
-	1    5450 6100
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR0106
 U 1 1 6050E5D5
-P 8350 2800
-F 0 "#PWR0106" H 8350 2650 50  0001 C CNN
-F 1 "+5V" H 8365 2973 50  0000 C CNN
-F 2 "" H 8350 2800 50  0001 C CNN
-F 3 "" H 8350 2800 50  0001 C CNN
-	1    8350 2800
+P 5800 4650
+F 0 "#PWR0106" H 5800 4500 50  0001 C CNN
+F 1 "+5V" H 5815 4823 50  0000 C CNN
+F 2 "" H 5800 4650 50  0001 C CNN
+F 3 "" H 5800 4650 50  0001 C CNN
+	1    5800 4650
 	1    0    0    -1  
-$EndComp
-NoConn ~ 6050 5400
-Wire Wire Line
-	5650 5250 5650 5400
-Wire Wire Line
-	5850 4250 5850 5400
-Wire Wire Line
-	5950 4150 5950 5400
-Wire Wire Line
-	5650 5250 7150 5250
-Wire Wire Line
-	7250 5000 8300 5000
-$Comp
-L Device:Jumper_NC_Dual JP1
-U 1 1 604CD86C
-P 7150 5000
-F 0 "JP1" V 7196 5101 50  0000 L CNN
-F 1 "Prog/C64" V 7105 5101 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7150 5000 50  0001 C CNN
-F 3 "~" H 7150 5000 50  0001 C CNN
-	1    7150 5000
-	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR0107
@@ -321,4 +226,66 @@ F 3 "" H 4550 3300 50  0001 C CNN
 	1    4550 3300
 	-1   0    0    1   
 $EndComp
+Wire Wire Line
+	5100 4250 6050 4250
+Wire Wire Line
+	5400 4150 6050 4150
+$Comp
+L power:GND #PWR0103
+U 1 1 6050150B
+P 7150 4650
+F 0 "#PWR0103" H 7150 4400 50  0001 C CNN
+F 1 "GND" H 7155 4477 50  0000 C CNN
+F 2 "" H 7150 4650 50  0001 C CNN
+F 3 "" H 7150 4650 50  0001 C CNN
+	1    7150 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 60502096
+P 4950 4650
+F 0 "#PWR0105" H 4950 4400 50  0001 C CNN
+F 1 "GND" H 4955 4477 50  0000 C CNN
+F 2 "" H 4950 4650 50  0001 C CNN
+F 3 "" H 4950 4650 50  0001 C CNN
+	1    4950 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP1
+U 1 1 60502D56
+P 8600 4650
+F 0 "JP1" H 8600 4914 50  0000 C CNN
+F 1 "C64" H 8600 4823 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8600 4650 50  0001 C CNN
+F 3 "~" H 8600 4650 50  0001 C CNN
+	1    8600 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 4350 9100 4350
+Wire Wire Line
+	8300 4050 8300 4650
+Wire Wire Line
+	8800 4250 8800 3950
+$Comp
+L power:GND #PWR0101
+U 1 1 604F18E9
+P 8900 4650
+F 0 "#PWR0101" H 8900 4400 50  0001 C CNN
+F 1 "GND" H 8905 4477 50  0000 C CNN
+F 2 "" H 8900 4650 50  0001 C CNN
+F 3 "" H 8900 4650 50  0001 C CNN
+	1    8900 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 4050 8900 4650
+Wire Wire Line
+	8800 3950 9100 3950
+Connection ~ 8900 4650
+Wire Wire Line
+	8900 4050 9000 4050
+Connection ~ 9000 4050
 $EndSCHEMATC
